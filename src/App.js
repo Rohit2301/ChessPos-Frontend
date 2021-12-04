@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
 import { useMoralis } from "react-moralis";
+import JoinLobby from "./JoinLobby";
 
 import "./index.css";
 function App({ isServerInfo }) {
@@ -15,6 +16,7 @@ function App({ isServerInfo }) {
   return (
     <>
       <HomePage />
+      <JoinLobby />
     </>
   );
 }
