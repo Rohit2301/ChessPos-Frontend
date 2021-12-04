@@ -36,7 +36,7 @@ function Wallet() {
   if (!isAuthenticated) {
     return (
       <div
-        style={styles.account}
+        // style={styles.account}
         onClick={() =>
           authenticate({
             signingMessage: "Welcome to Chess Pos",
@@ -55,7 +55,7 @@ function Wallet() {
   return (
     <>
       <div
-        style={styles.account}
+        // style={styles.account}
         onClick={() => {
           console.log("Open model");
           setIsModalVisible(true);

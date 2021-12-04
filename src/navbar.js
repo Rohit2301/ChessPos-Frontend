@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./img/Logo.png";
 import Walle from "./img/Wallet.png";
 import Nft from "./img/NFT SYMBOL.png";
+import Wallet from "../src/components/Wallet/Wallet";
 
 const Navbar = ({ head }) => {
   return (
@@ -16,8 +17,7 @@ const Navbar = ({ head }) => {
           <div className="wallImgTextNft">Your Nfts</div>
         </div>
         <div className="imgFlex">
-          <img src={Walle} className="walletImg" />
-          <div className="wallImgText">Connect Wallet</div>
+          <Wallet />
         </div>
       </div>
     </div>

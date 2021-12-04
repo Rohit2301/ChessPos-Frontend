@@ -9,6 +9,11 @@ import config from "../config/config";
 import contractABI from "../contract/contractABI.json";
 import Loader from "./Loader/Loader";
 import StakeTokens from "./StakeTokens";
+import Navbar from "../navbar";
+import Circles from "../../src/img/Circles2.png";
+import Vs from "../../src/img/vs.png";
+import { autocompleteClasses } from "@mui/material";
+import { padding } from "@mui/system";
 
 const socket = require("../connections/socket").socket;
 
@@ -101,57 +106,77 @@ function HomePage() {
 
   const mainPage = () => {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <form onSubmit={createGame}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <input
-              type="number"
-              style={{ margin: "10px" }}
-              placeholder="Amount"
-              value={amount}
-              onChange={handleAmount}
-            />
-            <input
-              type="submit"
-              value="Create Game"
-              style={{ margin: "10px" }}
-            />
-          </div>
-        </form>
-        <Wallet />
-        {isAuthenticated && <Chains />}
-        <form onSubmit={joinGame}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <input
-              type="text"
-              style={{ margin: "10px" }}
-              placeholder="Game Id"
-              value={gameIdInput}
-              onChange={handleGameIdInput}
-            />
-            <input type="submit" value="Join Game" style={{ margin: "10px" }} />
-          </div>
-        </form>
+      <div className="wonDiv">
+        <img
+          src={Circles}
+          className=""
+          style={{
+            position: "absolute",
+            right: "30rem",
+            top: "0",
+            height: "55rem",
+            width: "55rem",
+            zIndex: "0",
+          }}
+        />
+        <Navbar head="ChessPOS" />
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <form onSubmit={createGame}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
+              <input
+                type="number"
+                style={{ margin: "10px" }}
+                placeholder="Amount"
+                value={amount}
+                onChange={handleAmount}
+              />
+              <input
+                type="submit"
+                value="Create Game"
+                style={{ margin: "10px" }}
+              />
+            </div>
+          </form>
+          <Wallet />
+          {isAuthenticated && <Chains />}
+          <form onSubmit={joinGame}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
+              <input
+                type="text"
+                style={{ margin: "10px" }}
+                placeholder="Game Id"
+                value={gameIdInput}
+                onChange={handleGameIdInput}
+              />
+              <input
+                type="submit"
+                value="Join Game"
+                style={{ margin: "10px" }}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     );
   };

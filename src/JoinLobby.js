@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./navbar";
+import Navbar from "../src/navbar";
 import Circles from "./img/Circles2.png";
 import Vs from "./img/vs.png";
 import { autocompleteClasses } from "@mui/material";
@@ -124,9 +124,8 @@ const JoinLobby = () => {
                 left: "3.3rem",
                 borderRadius: "2rem",
                 fontSize: "1.4rem",
-                paddingTop: "8px"
+                paddingTop: "8px",
               }}
-              
             >
               Submit
             </div>
@@ -153,10 +152,8 @@ const JoinLobby = () => {
               height: "6rem",
               bottom: "8rem",
             }}
-            
           >
-          <span style={{fontSize: "2.5rem"}}>Play a Match</span>
-
+            <span style={{ fontSize: "2.5rem" }}>Play a Match</span>
           </section>
         </div>
       </div>
